@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login-template</title>
+
+    <style>
+        .header {
+            background: #f5f8fa;
+            /* overflow-x: hidden; */
+        }
+        
+        .body {
+            width: 62%;
+            box-shadow: 0px 1.0566px 42.57px rgba(28, 33, 39, 0.08);
+            margin: 3.37rem auto 2rem;
+            background-color: #ffffff;
+        }
+        
+        .hero {
+            position: relative;
+        }
+        
+        .logo {
+            position: absolute;
+            top: 50%;
+            left: 75px;
+            transform: translateY(-50%);
+        }
+        
+        .logo-bg {
+            width: 100%;
+        }
+        
+        .body-info {
+            padding-left: 3rem;
+            padding-top: 1rem;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 35px;
+            padding-right: 3rem;
+            margin: 0;
+        }
+        
+        .button-info {
+            border: none;
+            border-radius: 1rem;
+            width: 11rem;
+            height: 4rem;
+            color: blue;
+            font-weight: 500;
+            padding: 1rem 4rem 1rem 1.5rem;
+        }
+        
+        .info {
+            padding-bottom: 2.7rem;
+        }
+        
+        .bottom-inst {
+            padding-left: 20rem;
+        }
+        
+        .table-footer {
+            height: 3rem !important;
+        }
+        
+        .google-play,
+        .app-store {
+            background-color: #071c35;
+            padding: 0.5rem;
+            height: 1rem;
+            border-radius: 4px;
+            margin-right: 1rem;
+        }
+        
+        .footer-layer {
+            padding: 0.5rem;
+        }
+        
+        .footer-twitter {
+            padding: 0.5rem;
+        }
+        
+        .footer-linkedin {
+            padding: 0.5rem;
+        }
+        
+        .footer-instagram {
+            padding: 0.5rem;
+        }
+        
+        .footer-icons {
+            padding-left: 20rem;
+        }
+        
+        .footer-body {
+            padding-left: 20rem;
+            font-size: 14px;
+            line-height: 26px;
+            font-weight: 500;
+        }
+        
+        .unsubscribe {
+            text-decoration: underline;
+        }
+        /* media query */
+        
+        @media only screen and (max-width: 760px) {
+            /* .header {
+                overflow-x: hidden;
+                overflow-y: hidden;
+            } */
+            .body {
+                width: 70%;
+                overflow-x: hidden;
+                /* overflow-y: hidden; */
+            }
+            .button-info {
+                margin-right: 20rem;
+            }
+            .bottom-first {
+                padding-left: -150rem;
+            }
+            .footer-body {
+                padding-right: -50rem;
+            }
+            .bottom-contact {
+                /* padding-right: 50rem; */
+                width: 50%;
+                display: table-row;
+            }
+        }
+    </style>
+</head>
+
+<body class="header">
+    <div class="body">
+        <div class="hero">
+            <img src="./resources/bground.png" alt="" class="logo-bg" />
+            <img src="./resources/roqqulogo.png" alt="" class="logo" />
+        </div>
+
+        <div class="body-info">
+            <h3>Your sign-in code</h3>
+            <h4>Hi JayKay,</h4>
+
+            <div>
+                <p>
+                    Please copy and paste the 5-digit code below into the number fields of your sign-in process.
+                </p>
+            </div>
+
+            <table>
+                <td class="info">
+                    <tr class="button">
+                        <button class="button-info">
+                <img src="./resources/Frame7.png" alt="" />
+              </button>
+                    </tr>
+                </td>
+            </table>
+        </div>
+    </div>
+
+    <div class="bottom-first">
+        <div class="bottom-inst">
+            <h2>Download our app</h2>
+        </div>
+    </div>
+    <div class="footer-body">
+        <!-- <div class="bottom-first">
+            <div class="bottom-inst">
+                <h2>Download our app</h2>
+            </div>
+        </div> -->
+        <table class="table-footer">
+            <tr>
+                <td class="bottom-photos">
+                    <img src="./resources/App2.png " alt=" " class="app-store" />
+                    <img src="./resources/app1.png " alt=" " class="google-play" />
+                </td>
+
+                <td class="footer-icons">
+                    <img src="./resources/Facebook.png " alt=" " class="footer-layer" />
+                    <img src="./resources/Twitter.png " alt=" " class="footer-twitter" />
+                    <img src="./resources/Linkedin.png " alt=" " class="footer-linkedin" />
+                    <img src="./resources/Instagram.png " alt=" " class="footer-instagram" />
+                </td>
+            </tr>
+        </table>
+
+        <div class="bottom-contact">
+            <div class="bottom">
+                <p>
+                    Messages from Roqqu, including our Customer Experience team, will always come from a
+                    <br />help@roqqu.com email address. We will never ask you for account information like your <br />password or answers to security questions
+                </p>
+            </div>
+
+            <div>
+                <p>
+                    27a Road 11, Ikota Villa Estate, Lekki-Epe Expressway, Lagos <br /> +2348166106863, +348135718084
+                </p>
+            </div>
+
+            <div class="unsubscribe">
+                <p>Unsubscribe</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
