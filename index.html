@@ -1,216 +1,311 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="./fontawesome-free-6.2.1-web/css/all.css"
+      class=""
+    />
     <title>Login-template</title>
 
     <style>
-        .header {
-            background: #f5f8fa;
-            /* overflow-x: hidden; */
-        }
-        
+      /* I added some new  css selectors and delected some old ones that were not needed. Uncomment the background color at the top of each of them to see how far they extend and study the css properties inside them */
+
+      .header {
+        background: #f5f8fa;
+        /* overflow-x: hidden; */
+        /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+        font-family: Arial, Helvetica, sans-serif;
+        box-sizing: border-box;
+      }
+
+      .body {
+        width: 62%;
+        box-shadow: 0px 1.0566px 42.57px rgba(28, 33, 39, 0.08);
+        margin: 3.37rem auto 2rem;
+        background-color: #ffffff;
+        border-radius: 8px;
+      }
+      @media only screen and (max-width: 768px) {
         .body {
-            width: 62%;
-            box-shadow: 0px 1.0566px 42.57px rgba(28, 33, 39, 0.08);
-            margin: 3.37rem auto 2rem;
-            background-color: #ffffff;
+          width: 91.79%;
+          overflow-x: hidden;
+          /* overflow-y: hidden; */
         }
-        
-        .hero {
-            position: relative;
-        }
-        
+      }
+      .hero {
+        position: relative;
+      }
+
+      .logo {
+        position: absolute;
+        top: 50%;
+        left: 65px;
+        transform: translateY(-50%);
+      }
+      @media only screen and (max-width: 768px) {
         .logo {
-            position: absolute;
-            top: 50%;
-            left: 75px;
-            transform: translateY(-50%);
+          left: 43px;
         }
-        
-        .logo-bg {
-            width: 100%;
+      }
+      @media only screen and (max-width: 500px) {
+        .logo {
+          left: 23px;
+          height: 18px;
         }
-        
-        .body-info {
-            padding-left: 3rem;
-            padding-top: 1rem;
-            font-weight: 500;
-            font-size: 20px;
-            line-height: 35px;
-            padding-right: 3rem;
-            margin: 0;
-        }
-        
-        .button-info {
-            border: none;
-            border-radius: 1rem;
-            width: 11rem;
-            height: 4rem;
-            color: blue;
-            font-weight: 500;
-            padding: 1rem 4rem 1rem 1.5rem;
-        }
-        
-        .info {
-            padding-bottom: 2.7rem;
-        }
-        
-        .bottom-inst {
-            padding-left: 20rem;
-        }
-        
-        .table-footer {
-            height: 3rem !important;
-        }
-        
-        .google-play,
-        .app-store {
-            background-color: #071c35;
-            padding: 0.5rem;
-            height: 1rem;
-            border-radius: 4px;
-            margin-right: 1rem;
-        }
-        
-        .footer-layer {
-            padding: 0.5rem;
-        }
-        
-        .footer-twitter {
-            padding: 0.5rem;
-        }
-        
-        .footer-linkedin {
-            padding: 0.5rem;
-        }
-        
-        .footer-instagram {
-            padding: 0.5rem;
-        }
-        
-        .footer-icons {
-            padding-left: 20rem;
-        }
-        
+      }
+
+      .logo-bg {
+        width: 100%;
+      }
+      .body-info {
+        /* background-color: green; */
+        width: 86.3%;
+        margin: 0 auto;
+        padding: 32px 0 44px;
+        display: block;
+      }
+      .body-info-title {
+        /* background-color: blue; */
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 32px;
+        color: #1c2127;
+      }
+      .body-info-name {
+        /* background-color: red; */
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 24px;
+        color: #1c2127;
+      }
+      .body-info-text {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 25px;
+        color: #1c2127;
+      }
+
+      .info {
+        padding-bottom: 2.7rem;
+      }
+      .numbers-table {
+        padding: 1.5rem 1rem;
+        box-shadow: 0px 0px 1px rgba(12, 26, 75, 0.24),
+          0px 3px 8px -1px rgba(50, 50, 71, 0.05);
+        border-radius: 1rem;
+        width: 196px;
+        height: 80px;
+        background: #f5f8fa;
+        /* background: red; */
+      }
+      .numbers-row {
+        /* background-color: orange; */
+      }
+      .numbers {
+        /* background-color: green; */
+        width: 74%;
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 48px;
+        color: #2764ff;
+      }
+      .numbers-copy-icon {
+        /* background-color: brown; */
+        padding-left: 19px;
+        height: 20px;
+        width: 18px;
+        border-radius: 0px;
+        color: #2764ff;
+      }
+
+      .footer-body {
+        width: 53.5%;
+        font-size: 14px;
+        line-height: 26px;
+        font-weight: 500;
+        margin: auto;
+      }
+      @media only screen and (max-width: 768px) {
         .footer-body {
-            padding-left: 20rem;
-            font-size: 14px;
-            line-height: 26px;
-            font-weight: 500;
+          width: 80%;
         }
-        
-        .unsubscribe {
-            text-decoration: underline;
+      }
+
+      .bottom-first {
+        /* background-color: red; */
+      }
+
+      .table-footer {
+        height: 3rem !important;
+      }
+
+      .bottom-photos {
+        /* background-color: red; */
+        width: 69.8%;
+      }
+
+      .footer-icons {
+        /* background-color: green; */
+      }
+      @media only screen and (max-width: 768px) {
+        .footer-row,
+        .bottom-photos,
+        .footer-icons {
+          display: block;
         }
-        /* media query */
-        
-        @media only screen and (max-width: 760px) {
-            /* .header {
-                overflow-x: hidden;
-                overflow-y: hidden;
-            } */
-            .body {
-                width: 70%;
-                overflow-x: hidden;
-                /* overflow-y: hidden; */
-            }
-            .button-info {
-                margin-right: 20rem;
-            }
-            .bottom-first {
-                padding-left: -150rem;
-            }
-            .footer-body {
-                padding-right: -50rem;
-            }
-            .bottom-contact {
-                /* padding-right: 50rem; */
-                width: 50%;
-                display: table-row;
-            }
+        .bottom-photos {
+          width: 100%;
         }
+        .footer-icons {
+          /* background-color: green; */
+          /* I think there are some extra spaces on the icons so I'm using this to manually adjust the icons container to the left */
+          margin-left: -0.7rem;
+        }
+      }
+
+      .google-play,
+      .app-store {
+        background-color: #071c35;
+        padding: 0.5rem;
+        height: 1rem;
+        border-radius: 4px;
+        margin-right: 1rem;
+      }
+
+      .footer-layer {
+        padding: 0.5rem;
+      }
+
+      .footer-twitter {
+        padding: 0.5rem;
+      }
+
+      .footer-linkedin {
+        padding: 0.5rem;
+      }
+
+      .footer-instagram {
+        padding: 0.5rem;
+      }
+
+      .email-bottom {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 26px;
+        color: #1c2127;
+        margin-bottom: 228px;
+      }
+
+      .unsubscribe {
+        text-decoration: underline;
+        color: #1c2127;
+      }
     </style>
-</head>
+  </head>
 
-<body class="header">
+  <body class="header">
     <div class="body">
-        <div class="hero">
-            <img src="./resources/bground.png" alt="" class="logo-bg" />
-            <img src="./resources/roqqulogo.png" alt="" class="logo" />
-        </div>
+      <div class="hero">
+        <img src="./resources/bground.png" alt="" class="logo-bg" />
+        <img src="./resources/roqqulogo.png" alt="" class="logo" />
+      </div>
 
-        <div class="body-info">
-            <h3>Your sign-in code</h3>
-            <h4>Hi JayKay,</h4>
+      <div class="body-info">
+        <h3 class="body-info-title">Your sign-in code</h3>
+        <h4 class="body-info-name">Hi JayKay,</h4>
+        <p class="body-info-text">
+          Please copy and paste the 5-digit code below into the number fields of
+          your sign-in process.
+        </p>
 
-            <div>
-                <p>
-                    Please copy and paste the 5-digit code below into the number fields of your sign-in process.
-                </p>
-            </div>
-
-            <table>
-                <td class="info">
-                    <tr class="button">
-                        <button class="button-info">
-                <img src="./resources/Frame7.png" alt="" />
-              </button>
-                    </tr>
-                </td>
-            </table>
-        </div>
-    </div>
-
-    <div class="bottom-first">
-        <div class="bottom-inst">
-            <h2>Download our app</h2>
-        </div>
-    </div>
-    <div class="footer-body">
-        <!-- <div class="bottom-first">
-            <div class="bottom-inst">
-                <h2>Download our app</h2>
-            </div>
-        </div> -->
-        <table class="table-footer">
-            <tr>
-                <td class="bottom-photos">
-                    <img src="./resources/App2.png " alt=" " class="app-store" />
-                    <img src="./resources/app1.png " alt=" " class="google-play" />
-                </td>
-
-                <td class="footer-icons">
-                    <img src="./resources/Facebook.png " alt=" " class="footer-layer" />
-                    <img src="./resources/Twitter.png " alt=" " class="footer-twitter" />
-                    <img src="./resources/Linkedin.png " alt=" " class="footer-linkedin" />
-                    <img src="./resources/Instagram.png " alt=" " class="footer-instagram" />
-                </td>
-            </tr>
+        <!-- <div class="numbers">12</div> -->
+        <!-- added  -->
+        <table class="numbers-table">
+          <tr class="numbers-row">
+            <td class="numbers">123456</td>
+            <td class="numbers-copy-icon">
+              <!-- <i class="fa-solid fa-copy"></i> -->
+              <img src="./resources/copy-icon.png" alt="copy" class="" />
+            </td>
+          </tr>
         </table>
 
-        <div class="bottom-contact">
-            <div class="bottom">
-                <p>
-                    Messages from Roqqu, including our Customer Experience team, will always come from a
-                    <br />help@roqqu.com email address. We will never ask you for account information like your <br />password or answers to security questions
-                </p>
-            </div>
+        <!-- commented out -->
 
-            <div>
-                <p>
-                    27a Road 11, Ikota Villa Estate, Lekki-Epe Expressway, Lagos <br /> +2348166106863, +348135718084
-                </p>
-            </div>
-
-            <div class="unsubscribe">
-                <p>Unsubscribe</p>
-            </div>
-        </div>
+        <!-- <table>
+          <td class="info">
+            <tr class="button">
+              <button class="button-info">
+                <img src="./resources/Frame7.png" alt="" />
+              </button>
+            </tr>
+          </td>
+        </table> -->
+      </div>
     </div>
-</body>
 
+    <!-- commented out -->
+
+    <!-- <div class="bottom-first">
+      <div class="bottom-inst">
+        <h2>Download our app</h2>
+      </div>
+    </div> -->
+    <div class="footer-body">
+      <!-- added -->
+      <div class="bottom-first">
+        <div class="bottom-inst">
+          <h2>Download our app</h2>
+        </div>
+      </div>
+      <table class="table-footer">
+        <tr class="footer-row">
+          <td class="bottom-photos">
+            <img src="./resources/App2.png " alt=" " class="app-store" />
+            <img src="./resources/app1.png " alt=" " class="google-play" />
+          </td>
+
+          <td class="footer-icons">
+            <img src="./resources/Facebook.png " alt=" " class="footer-layer" />
+            <img
+              src="./resources/Twitter.png "
+              alt=" "
+              class="footer-twitter"
+            />
+            <img
+              src="./resources/Linkedin.png "
+              alt=" "
+              class="footer-linkedin"
+            />
+            <img
+              src="./resources/Instagram.png "
+              alt=" "
+              class="footer-instagram"
+            />
+          </td>
+        </tr>
+      </table>
+
+      <div class="email-bottom">
+        <!-- There's no need warpping paragraphs in divs -->
+        <p class="roqqu-message">
+          Messages from Roqqu, including our Customer Experience team, will
+          always come from a
+          <br />help@roqqu.com email address. We will never ask you for account
+          information like your <br />password or answers to security questions
+        </p>
+
+        <p class="roqqu-address">
+          27a Road 11, Ikota Villa Estate, Lekki-Epe Expressway, Lagos <br />
+          +2348166106863, +348135718084
+        </p>
+
+        <a href="#unsuscribe-link" class="unsubscribe">Unsubscribe</a>
+      </div>
+    </div>
+  </body>
 </html>
